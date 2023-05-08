@@ -25,10 +25,14 @@
             <table style="margin-left:auto;margin-right:auto;width:100%;">
                 <tr>
                     <td rowspan="2"><img src="{{ asset('images/User.svg') }}" alt="User" class="propic"></td>
-                    <td><span class="tab-item">Administrator</span></td>
+                    <td>
+                        @auth
+                            <span style="text-transform:uppercase" class="tab-item">{{auth()->user()->name}}</span>
+                        @endauth
+                    </td>
                 </tr>
                 <tr>
-                    <td><span class="tab-item">Log Out</span></td>
+                    <td><span class="tab-item"><a href={{route('logout')}}>Log Out</a></span></td>
                 </tr>
             </table>
         </a></li>

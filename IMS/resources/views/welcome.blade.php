@@ -28,7 +28,6 @@
             body{
                 background: #FFFFFF;
             }
-
             nav{
                 position: absolute;
                 top: 0;
@@ -76,7 +75,7 @@
                 position: relative;
                 top: 12px;
                 margin-left: 10%;
-                }
+            }
 
             .tab-item{
                 position: relative;
