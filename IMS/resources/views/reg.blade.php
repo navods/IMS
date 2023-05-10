@@ -53,3 +53,5 @@
               <p>Already have an account? <a href={{route('login')}}><b>Login</b></a></p>
         </div>
 @endsection
+
+<!--comment-->
