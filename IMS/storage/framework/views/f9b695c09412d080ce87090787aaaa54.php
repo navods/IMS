@@ -1,5 +1,9 @@
 
 
+<?php $__env->startSection('bootstrap'); ?>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+<?php $__env->stopSection(); ?>
+
 <?php $__env->startSection('content'); ?>
         <div class="container">
             <form action="<?php echo e(route('login.post')); ?>" method="POST" class="mt-3">

@@ -41,12 +41,19 @@ class AuthManager extends Controller
         $request->validate([
             'name' => 'required',
             'username' => 'required|unique:users',
-            'password' => 'required'
+            'password' => 'required',
+            'facselect' => 'required',
+            'department',
+            'labID'
         ]);
 
         $data['name'] = $request->name;
         $data['username'] = $request->username;
         $data['password'] = Hash::make($request->password);
+        $data['facselect'] = $request->facselect;
+        $data['department'] = $request->department;
+        $data['labID'] = $request->labID;
+        $data['permission'];
         $user = User::create($data);
 
         if(!$user){

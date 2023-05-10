@@ -1,5 +1,5 @@
 <nav>
-    <ul>
+    <ul style="text-decoration: none">
         <li class="logo">
             <img src="<?php echo e(asset('images/Logo White.svg')); ?>" alt="Logo">
         </li>

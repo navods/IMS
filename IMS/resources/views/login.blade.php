@@ -1,5 +1,9 @@
 @extends('layout')
 
+@section('bootstrap')
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+@endsection
+
 @section('content')
         <div class="container">
             <form action="{{route('login.post')}}" method="POST" class="mt-3">

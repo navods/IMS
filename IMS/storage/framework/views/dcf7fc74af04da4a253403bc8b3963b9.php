@@ -1,0 +1,1 @@
+<?php /**PATH D:\Projects by Navva\UOC\IMS\IMS\resources\views/userauther.blade.php ENDPATH**/ ?>

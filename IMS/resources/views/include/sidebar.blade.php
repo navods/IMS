@@ -1,5 +1,5 @@
 <nav>
-    <ul>
+    <ul style="text-decoration: none">
         <li class="logo">
             <img src="{{ asset('images/Logo White.svg') }}" alt="Logo">
         </li>
