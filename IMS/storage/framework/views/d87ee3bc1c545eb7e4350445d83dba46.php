@@ -31,8 +31,9 @@
         </tr>
     </table>
 </div>-->
+<h1 style="margin-top:3%; margin-left:3%">New Registrations</h1>
 
-<table class="table" style="margin-top:3%;margin-left:auto;margin-right:auto;width:90%;">
+<table class="table" style="margin-top:2%;margin-left:auto;margin-right:auto;width:90%;">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -45,21 +46,32 @@
     </thead>
     <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
+        <!--<td scope="row">1</td>-->
+        <?php $__currentLoopData = $users; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $user): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <td><?php echo e($user['username']); ?></td>
+            <td><?php echo e($user['name']); ?></td>
+            <td><?php echo e($user['facselect']); ?></td>
+            <td><?php echo e($user['department']); ?></td>
+            <td><?php echo e($user['labID']); ?></td>
+            <td>
+              <div class="container">
+                <form action="<?php echo e(route('listuser.post')); ?>" method="POST" class="mt-3">
+                  <?php echo csrf_field(); ?> 
+                  <div>
+                    <select id="permission" name="permission" class="form-select">
+                      <option value="2">Accept - Technical Officer</option>
+                      <option value="3">Accept - Supervisor</option>
+                      <option value="4">Accept - Administrator</option>
+                      <option value="0">Decline</option>
+                    </select>
+                  </div>
+                  <div class="pull-right">
+                  <button type="submit" class="btn btn-primary" style="background-color:#9C10EC;border:0">Confirm</button>
+                  </div>
+                </form>
+              </div>
+            </td>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </tr>
     </tbody>
   </table>

@@ -64,4 +64,9 @@ class AuthManager extends Controller
         Auth::logout();
         return redirect(route('login'));
     }
+
+    function listuser(){
+        $data = User::all();
+        return view('useradmin', ['users'=>$data]);
+    }
 }

@@ -28,6 +28,9 @@ Route::get('/registration', [AuthManager::class, 'registration'])->name('registr
 Route::post('/registration', [AuthManager::class, 'registrationPost'])->name('registration.post');
 Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
 
-Route::get('/useradmin', function () {
+/*Route::get('/useradmin', function () {
     return view('useradmin');
-})->name('useradmin');
+})->name('useradmin');*/
+
+Route::get('/useradmin', [AuthManager::class, 'listuser'])->name('listuser');
+Route::post('/useradmin', [AuthManager::class, 'listuserpost'])->name('listuser.post');
