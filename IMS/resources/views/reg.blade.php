@@ -18,21 +18,20 @@
                 </div>
                 <div class="mb-3">
                   <label for="facselect" class="form-label">Select Faculty</label>
-                  <select id="facselect" class="form-select">
-                    <option>Faculty of Technology</option>
-                    <option>Faculty of Science</option>
-                    <option>Faculty of Law</option>
-                    <option>Faculty of Management & Finance</option>
-                    <option>Faculty of Arts</option>
-                    <option>Faculty of Medicine</option>
-                    <option>Faculty of Nursing</option>
-                    <option>Faculty of Indigenous Medicine</option>
-                    <option>Faculty of Graduate Studies</option>
-                    <option>Faculty of Education</option>
-                    <option>School of Computing</option>
-                    <option>Sri Palee Campus</option>
-                    <option>Department of Physical Education</option>
-                    <option>College House</option>
+                  <select id="facselect" name="facselect" class="form-select">
+                    <option value="1">Faculty of Technology</option>
+                    <option value="2">Faculty of Science</option>
+                    <option value="3">Faculty of Law</option>
+                    <option value="4">Faculty of Management & Finance</option>
+                    <option value="5">Faculty of Arts</option>
+                    <option value="6">Faculty of Medicine</option>
+                    <option value="7">Faculty of Nursing</option>
+                    <option value="8">Faculty of Indigenous Medicine</option>
+                    <option value="9">Faculty of Graduate Studies</option>
+                    <option value="10">Faculty of Education</option>
+                    <option value="11">School of Computing</option>
+                    <option value="12">Sri Palee Campus</option>
+                    <option value="13">Non-Academic</option>
                   </select>
                 </div>
                 <div class="mb-3">

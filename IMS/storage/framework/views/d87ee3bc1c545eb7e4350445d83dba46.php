@@ -1,84 +1,68 @@
 
 
-<?php $__env->startSection('styles'); ?>
-    <style>
-        *{
-            margin:0;
-            padding: 0;
-            outline: none;
-            border: none;
-            text-decoration: none;
-            box-sizing: border-box;
-            font-family: "Merriweather Sans", sans-serif;
-        }
-
-        body{
-            background: #FFFFFF;
-        }
-
-        nav{
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            height: 100%;
-            left: 0;
-            background: #9C10EC;
-            width: 15%;
-            overflow: hidden;
-            transition: width 0.2s linear;
-            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1)
-        }
-
-        .logo{
-            text-align: center;
-            display: flex;
-            transition: all 0.5s ease;
-        }
-
-        .logo img{
-            display: block;
-            margin-top: 10%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 20%;
-            width: 80%;
-        }
-
-        .logo span{
-            font-weight: bold;
-            padding: 15px;
-            font-size: 18px;
-        }
-
-        a{
-            position: relative;
-            color: #FFFFFF;
-            font-size: 25px;
-            display: table;
-            width: 300px;
-            padding: 10px;
-        }
-
-        .nav-item{
-            position: relative;
-            top: 12px;
-            margin-left: 10%;
-        }
-
-        .tab-item{
-            position: relative;
-            top: 0;
-            margin-left: 10px;
-        }
-
-        .propic{
-            margin-left: 10%;
-            width: 50px;
-        }
-    </style>
+<?php $__env->startSection('bootstrap'); ?>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
-    <?php echo $__env->make('include.sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    
+<!--style="position: absolute; top: 0; bottom: 0; height: 100%; right: 0; width: 85%;"
+<div>
+    <table class="data">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Faculty
+            </th>
+            <th>
+                Department
+            </th>
+            <th>
+                Lab
+            </th>
+            <th>
+                Authorization
+            </th>
+        </tr>
+    </table>
+</div>-->
+
+<table class="table" style="margin-top:3%;margin-left:auto;margin-right:auto;width:90%;">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Name</th>
+        <th scope="col">Faculty</th>
+        <th scope="col">Department</th>
+        <th scope="col">Lab</th>
+        <th scope="col">Permission</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Projects by Navva\UOC\IMS\IMS\resources\views/useradmin.blade.php ENDPATH**/ ?>

@@ -42,9 +42,7 @@ class AuthManager extends Controller
             'name' => 'required',
             'username' => 'required|unique:users',
             'password' => 'required',
-            'facselect' => 'required',
-            'department',
-            'labID'
+            'facselect' => 'required'
         ]);
 
         $data['name'] = $request->name;
@@ -53,7 +51,6 @@ class AuthManager extends Controller
         $data['facselect'] = $request->facselect;
         $data['department'] = $request->department;
         $data['labID'] = $request->labID;
-        $data['permission'];
         $user = User::create($data);
 
         if(!$user){

@@ -22,7 +22,7 @@
             <span class="nav-item">Settings</span>
         </a></li>
         <li><a href="#">
-            <table style="margin-left:auto;margin-right:auto;width:100%;">
+            <table class="userdata">
                 <tr>
                     <td rowspan="2"><img src="<?php echo e(asset('images/User.svg')); ?>" alt="User" class="propic"></td>
                     <td>
