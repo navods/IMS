@@ -65,8 +65,18 @@ class AuthManager extends Controller
         return redirect(route('login'));
     }
 
-    function listuser(){
+    function listusernew(){
         $data = User::all();
         return view('useradmin', ['users'=>$data]);
+        //$huuu = User::where('permission', '=', 1)->get();
+        
+        //return view('useradmin', $huuu);
+        
+    }
+
+    function listuserpost($username){
+        //$data = User::all();
+        //return view('useradmin', ['users'=>$data]);
+        //echo $username;
     }
 }

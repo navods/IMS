@@ -32,5 +32,5 @@ Route::get('/logout', [AuthManager::class, 'logout'])->name('logout');
     return view('useradmin');
 })->name('useradmin');*/
 
-Route::get('/useradmin', [AuthManager::class, 'listuser'])->name('listuser');
-Route::post('/useradmin', [AuthManager::class, 'listuserpost'])->name('listuser.post');
+Route::get('/useradmin', [AuthManager::class, 'listusernew'])->name('listusernew');
+//Route::get('/useradmin', [AuthManager::class, 'listuserpost']);

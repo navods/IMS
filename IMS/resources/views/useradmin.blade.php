@@ -45,34 +45,37 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <!--<td scope="row">1</td>-->
-        @foreach ($users as $user)
-            <td>{{$user['username']}}</td>
-            <td>{{$user['name']}}</td>
-            <td>{{$user['facselect']}}</td>
-            <td>{{$user['department']}}</td>
-            <td>{{$user['labID']}}</td>
-            <td>
+      <!--<td scope="row">1</td>-->
+      @foreach ($users as $user)
+        <tr>
+          <td>{{$user['username']}}</td>
+          <td>{{$user['name']}}</td>
+          <td>{{$user['facselect']}}</td>
+          <td>{{$user['department']}}</td>
+          <td>{{$user['labID']}}</td>
+          <td>
               <div class="container">
-                <form action="{{route('listuser.post')}}" method="POST" class="mt-3">
+                <form action="listuserpost/{{$user->username}}" method="POST" class="mt-0">
                   @csrf 
-                  <div>
-                    <select id="permission" name="permission" class="form-select">
-                      <option value="2">Accept - Technical Officer</option>
-                      <option value="3">Accept - Supervisor</option>
-                      <option value="4">Accept - Administrator</option>
-                      <option value="0">Decline</option>
-                    </select>
-                  </div>
-                  <div class="pull-right">
-                  <button type="submit" class="btn btn-primary" style="background-color:#9C10EC;border:0">Confirm</button>
+                  <div class="row">
+                    <div class="col-5">
+                      <select id="permission" name="permission" class="form-select">
+                        <option value="1">No Access</option>
+                        <option value="2">Accept - Technical Officer</option>
+                        <option value="3">Accept - Supervisor</option>
+                        <option value="4">Accept - Administrator</option>
+                        <option value="0">Decline</option>
+                      </select>
+                    </div>
+                    <div class="col-2">
+                      <button type="submit" class="btn btn-primary" style="width:100%;background-color:#9C10EC;border:0;align:right">Confirm</button>
+                    </div>
                   </div>
                 </form>
               </div>
             </td>
-        @endforeach
-      </tr>
+        </tr>
+      @endforeach
     </tbody>
   </table>
 
